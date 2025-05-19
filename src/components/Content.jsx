@@ -4,7 +4,7 @@ export default function Content() {
     return (
         <main
             className="flex-grow-1 bg-white rounded shadow p-4"
-            style={{ maxWidth: '900px', marginLeft: '2rem', overflowY: 'auto', maxHeight: '100vh' }}
+            style={{ maxWidth: '900px', overflowY: 'auto', maxHeight: '100vh' }}
         >
             <section id="image" className="mb-5">
                 <h2 className="h5 fw-bold mb-3">📦 이미지(Image)란?</h2>

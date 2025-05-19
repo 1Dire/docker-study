@@ -1,23 +1,13 @@
 // 📁 src/components/TableOfContents.jsx
 import React from 'react';
 
-export default function TableOfContents() {
+export default function TableOfContents({ isOpen, onClose }) {
     return (
         <nav
-            className="toc-container"
-            style={{
-                width: '280px',
-                height: '100vh',
-                position: 'sticky',
-                top: 0,
-                padding: '1.5rem 1.2rem',
-                backgroundColor: '#1e293b',
-                color: '#e0e7ff',
-                boxShadow: '3px 0 10px rgba(0,0,0,0.15)',
-                fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-                display: 'flex',
-                flexDirection: 'column',
-            }}
+            className={`toc-container ${isOpen ? 'open' : ''}`}
+            onClick={onClose}
+            role="navigation"
+            aria-label="Table of Contents"
         >
             <h2
                 style={{

@@ -1,0 +1,81 @@
+/* 기본 flex 구조 유지 */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #a8dadc;
+}
+
+/* 목차 사이드바 기본 */
+.toc-container {
+    width: 280px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: #1e293b;
+    color: #e0e7ff;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* 메인 컨텐츠 */
+.main-content {
+    flex-grow: 1;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    max-width: 900px;
+    margin-left: 2rem;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+/* 모바일에서 목차 숨기고 토글 버튼 보이기 */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .toc-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 240px;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .toc-container.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .toggle-button {
+        display: block;
+        background-color: #1e293b;
+        color: #e0e7ff;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 토글 버튼 기본 숨김 */
+.toggle-button {
+    display: none;
+}
