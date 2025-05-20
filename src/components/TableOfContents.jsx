@@ -41,6 +41,10 @@ export default function TableOfContents({ isOpen, onClose }) {
                     ['#volume-vs-bind', '도커 볼륨(Volume) vs 바인드 마운트(Bind Mount) 비교'],
                     ['#storage-create', '📦 도커 스토리지 영역 생성 방법'],
                     ['#volume-commands', '📋 도커 볼륨 주요 하위 커맨드'],
+                    ["dockerfile-instructions","📝 Dockerfile 주요 인스트럭션"],
+                    ["docker-compose","🛠️ 도커 컴포즈(Docker Compose)란?"],
+                    ["docker-run-down","🚀 도커 컨테이너 실행과 중지"],
+                    ["what-is-kubernetes","☸️ 쿠버네티스(Kubernetes)란?"]
                 ].map(([href, text]) => (
                     <li key={href} style={{ marginBottom: '1rem' }}>
                         <a
